@@ -40,7 +40,7 @@ const Projects = () => {
               style={{ ...currentProject.logoStyle, display: 'flex', justifyContent: 'center' }}
             >
               <img
-                className="w-20 h-20 object-contain" // Ajusta el tamaño del logo
+                className="w-50 h-50 object-contain" // Ajusta el tamaño del logo
                 src={currentProject.logo}
                 alt="logo"
               />
@@ -61,7 +61,7 @@ const Projects = () => {
               rel="noreferrer"
             >
               <p>Verificar sitio en vivo</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+              <img src="/assets/arrow-up.png" alt="arrow" className="w-2 h-2" />
             </a>
           )}
 
@@ -79,7 +79,7 @@ const Projects = () => {
           {currentProject.images && currentProject.images.length > 0 ? (
             <img
               src={currentProject.images[0]} // Usa la primera imagen del array
-              alt="Captura de pantalla del proyecto"
+              alt="Foto del proyecto"
               className="w-full h-full object-cover rounded-lg"
             />
           ) : (
