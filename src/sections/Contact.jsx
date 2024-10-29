@@ -5,8 +5,8 @@ const Contact = () => {
     const formRef = useRef();
     const [loading, setLoading] = useState(false);
     const [form, setForm] = useState({
-        name: '',
-        email: '',
+        from_name: '',
+        from_email: '',
         message: ''
     });
 
@@ -17,25 +17,25 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
+        
         emailjs.send(
             import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
             import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
             {
-                from_name: form.name,
+                from_name: form.from_name,
                 to_name: 'JavaScript Mastery',
-                from_email: form.email,
+                from_email: form.from_email,
                 to_email: 'botopia.sas@gmail.com',
                 message: form.message,
             },
-            import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
-        )
-        .then(
+            import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        ).then(
             () => {
                 setLoading(false);
                 alert('Thank you for your message 😃');
                 setForm({
-                    name: '',
-                    email: '',
+                    from_name: '',
+                    from_email: '',
                     message: '',
                 });
             },
@@ -54,37 +54,37 @@ const Contact = () => {
                 <div className="contact-container"> 
                     <h3 className="head-text">Contáctanos</h3>
                     <p className="text-lg text-white-600 mt-3">
-                        Necesitas soluciones tecnológicas en tu empresa,
-                        o quieres estar a la vanguardia de los nuevos avances,
-                        contáctanos estamos para ayudarte.
+                        Necesitas soluciones tecnológicas en tu empresa, o quieres estar a la vanguardia de los nuevos avances, contáctanos estamos para ayudarte.
                     </p>
-                    <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
+                    <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7"> 
                         <label className="space-y-3">
-                            <span className="field-label"> Full name </span>
+                            <span className="field-label">Full name</span>
                             <input
                                 type="text"
-                                name="name"
-                                value={form.name}
+                                name="from_name"
+                                value={form.from_name}
                                 onChange={handleChange}
                                 required
                                 className="field-input"
                                 placeholder="Botopia"
                             />
                         </label>
+
                         <label className="space-y-3">
-                            <span className="field-label"> Email </span>
+                            <span className="field-label">Email</span>
                             <input
                                 type="email"
-                                name="email"
-                                value={form.email}
+                                name="from_email"
+                                value={form.from_email}
                                 onChange={handleChange}
                                 required
                                 className="field-input"
                                 placeholder="Botopia@gmail.com"
                             />
                         </label>
+
                         <label className="space-y-3">
-                            <span className="field-label"> Tu mensaje </span>
+                            <span className="field-label">Tu mensaje</span>
                             <textarea
                                 name="message"
                                 value={form.message}
@@ -95,8 +95,9 @@ const Contact = () => {
                                 placeholder="Hola, estoy interesado en..."
                             />
                         </label>
+
                         <button className="field-btn" type="submit" disabled={loading}>
-                            {loading ? 'enviando...' : 'Enviar'}
+                            {loading ? 'Enviando...' : 'Enviar'}
                             <img src="/assets/arrow-up.png" alt="arrow-up" className="filed-btn_arrow" />
                         </button>
                     </form>
