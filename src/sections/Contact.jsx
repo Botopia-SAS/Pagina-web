@@ -134,7 +134,7 @@ const Contact = () => {
                         <button className="field-btn" type="submit"
                         disabled={loading}>
 
-                            {loading ? 'enviando...' : 'mensaje enviado'}
+                            {loading ? 'enviando...' : 'mensaje '}
 
                             <img src="/assets/arrow-up.png" alt= "arrow-up" 
                             className="filed-btn_arrow" > 
