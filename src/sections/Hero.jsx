@@ -3,54 +3,21 @@ import { HackerRoom } from "../components/HackerRoom.jsx";
 import { PerspectiveCamera } from "@react-three/drei";
 //import { CanvasLoader } from "../components/CanvasLoader.jsx";
 import { Suspense } from "react";
-import { Leva, useControls } from "leva";
+import { useMediaQuery } from "react-responsive";
+import { calculateSizes } from '../constants/index.js';
+import Target from "../components/Target.jsx";
+import ReactLogo from '../components/ReactLogo.jsx';
+import Cube from "../components/Cube.jsx";
+import Rings from "../components/Rings.jsx";
+import HeroCamera from "../components/HeroCamera.jsx";
+import Button from "../components/Button.jsx";
 
 const Hero = () => {
-    const x = useControls('HackerRoom', {
-        positionX: {
-            value: 2.5,
-            min: -10,
-            max: 10,
-            step: 0.1, // Ajusta el tamaño del paso según necesites
-        },
-        positionY: {
-            value: 2.5,
-            min: -15,
-            max: 10,
-            step: 0.1,
-        },
-        positionZ: {
-            value: 2.5,
-            min: -10,
-            max: 10,
-            step: 0.1,
-        },
-        rotationX: {
-            value: 2.5,
-            min: -Math.PI,
-            max: Math.PI*2,
-            step: 0.01, // Rango ajustado para rotación en radianes
-        },
-        rotationY: {
-            value: 2.5,
-            min: -Math.PI,
-            max: Math.PI,
-            step: 0.01,
-        },
-        rotationZ: {
-            value: 2.5,
-            min: -Math.PI,
-            max: Math.PI,
-            step: 0.01,
-        },
-        scale: {
-            value: 1,
-            min: 0.1,
-            max: 10,
-            step: 0.01,
-        },
-    });
+    const isSmall =useMediaQuery({maxWidth:440});
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+    const isTablet = useMediaQuery({minWidth: 768, maxWidth:1024});
 
+    const sizes = calculateSizes(isSmall, isMobile, isTablet);
     
     return (
         <section className="min-h-screen w-full flex flex-col relative">
@@ -65,18 +32,20 @@ const Hero = () => {
                     Construimos la tecnología que necesitas
                 </p>
                 <div className="w-full h-full absolute inset-0">
-                    <Leva />
+                    {/*<Leva />*/}
                     <Canvas className="w-full h-full">
                         <Suspense fallback={''}>
-                            <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-                            <HackerRoom
-                                //scale={0.07}
-                                //position={[0, 0, 0]}
-                                //rotation={[0, 280, 0]}
-                                position={[2, -10, 2]}
-                                rotation={[0, -Math.PI, 0]}
-                                scale={[0.1, 0.1, 0.1]}
-                            />
+                            <PerspectiveCamera makeDefault position={[0, 0, 20]} />
+                            <HeroCamera isMobile={isMobile}>
+                                 <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />
+                             </HeroCamera>
+
+                             <group>
+                                <Target position={sizes.targetPosition} />
+                                <ReactLogo position={sizes.reactLogoPosition} />
+                                <Rings position={sizes.ringPosition} />
+                                <Cube position={sizes.cubePosition} />
+                             </group>
                             <ambientLight intensity={1} />
                             <directionalLight
                                 position={[10, 10, 10]}
@@ -85,6 +54,11 @@ const Hero = () => {
                         </Suspense>
                     </Canvas>
                 </div>
+                <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <a href="#about" className="w-fit">
+          <Button name="Contáctanos" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+        </a>
+      </div>
             </div>
         </section>
     )
