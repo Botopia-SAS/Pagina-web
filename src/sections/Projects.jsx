@@ -40,7 +40,7 @@ const Projects = () => {
               style={{ ...currentProject.logoStyle, display: 'flex', justifyContent: 'center' }}
             >
               <img
-                className="w-50 h-50 object-contain" // Ajusta el tamaño del logo
+                className="w-70 h-70 object-contain" // Ajusta el tamaño del logo
                 src={currentProject.logo}
                 alt="logo"
               />
