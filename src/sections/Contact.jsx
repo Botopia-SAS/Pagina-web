@@ -10,9 +10,9 @@ const Contact = () => {
 
     const [form, setForm] = useState({
 
-        name:'',
-        email:'',
-        message:''
+        Nombre:'',
+        Correo:'',
+        Mensaje:''
     })
 
     const handleChange = ({ target: { name, value } }) => {
@@ -72,11 +72,11 @@ const Contact = () => {
                 <img src="/assets/terminal.png" alt="terminal
                 background" className="absolute inset-0 min-h-screen"></img>
                 <div className="contact-container"> 
-                <h3 className="head-text">Contactanos</h3>
+                <h3 className="head-text">Contáctanos</h3>
                 <p className="text-lg text-white-600
                 mt-3"> Necesitas soluciones tecnológicas en tu empresa,
                 o quieres estar a la vanguardia de los nuevos avances,
-                contáctanos estamos para ayudarte</p>
+                contáctanos estamos para ayudarte.</p>
 
                 <form ref={formRef} onSubmit={handleSubmit}
                 className="mt-12 flex flex-col space-y-7"> 
