@@ -76,7 +76,7 @@ const Contact = () => {
                 <p className="text-lg text-white-600
                 mt-3"> Necesitas soluciones tecnológicas en tu empresa,
                 o quieres estar a la vanguardia de los nuevos avances,
-                contactanos estamos para ayudarte</p>
+                contáctanos estamos para ayudarte</p>
 
                 <form ref={formRef} onSubmit={handleSubmit}
                 className="mt-12 flex flex-col space-y-7"> 
