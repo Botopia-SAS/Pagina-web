@@ -1,4 +1,4 @@
-import React from "react"
+adoimport React from "react"
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 
@@ -109,7 +109,7 @@ const Contact = () => {
                          onChange={handleChange}
                          required
                          className="field-input"
-                         placeholder="Botopia@gmail.com"
+                         placeholder="Botopia.sas@gmail.com"
                          >
                         </input>
                         </label>
@@ -134,7 +134,7 @@ const Contact = () => {
                         <button className="field-btn" type="submit"
                         disabled={loading}>
 
-                            {loading ? 'enviando...' : 'mensaje '}
+                            {loading ? 'enviando...' : 'mensaje enviado'}
 
                             <img src="/assets/arrow-up.png" alt= "arrow-up" 
                             className="filed-btn_arrow" > 
