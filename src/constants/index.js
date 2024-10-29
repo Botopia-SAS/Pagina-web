@@ -76,7 +76,7 @@ export const myProjects = [
     desc: "Implementación y programación de la etapa de retrolavado de tanques para el sistema de producción de FEMSA Coca-Cola.",
     subdesc: "Nuestro equipo diseñó e implementó el sistema de control para optimizar el retrolavado, mejorando la eficiencia de limpieza y reduciendo el tiempo de inactividad de los tanques. Este proyecto permitió un ahorro significativo en recursos y cumplió con los estándares de calidad de la industria alimentaria.",
     spotlight: "", // Ruta de la imagen
-    logo: "/assets/femsa-cocacola-2.png.png",
+    logo: "/assets/femsa-cocacola-2.png",
     logoStyle: { borderRadius: '50%' },
     tags: [
       { name: "PLC", path: "/assets/plc-logo.png" },
