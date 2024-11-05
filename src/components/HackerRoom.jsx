@@ -11,7 +11,7 @@ export function HackerRoom(props) {
 
 
   const monitortxt = useTexture('textures/desk/monitor.png');
-  const screenTxt = useTexture('/textures/desk/screen.png');
+  const screenTxt = useTexture('/textures/desk/screen2.png');
 
 
   return (

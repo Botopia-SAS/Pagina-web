@@ -11,6 +11,7 @@ import Cube from "../components/Cube.jsx";
 import Rings from "../components/Rings.jsx";
 import HeroCamera from "../components/HeroCamera.jsx";
 import Button from "../components/Button.jsx";
+import { Model } from "../components/Mini_robot.jsx";
 
 const Hero = () => {
     const isSmall =useMediaQuery({maxWidth:440});
@@ -41,10 +42,10 @@ const Hero = () => {
                              </HeroCamera>
 
                              <group>
-                                <Target position={sizes.targetPosition} />
-                                <ReactLogo position={sizes.reactLogoPosition} />
-                                <Rings position={sizes.ringPosition} />
-                                <Cube position={sizes.cubePosition} />
+                                <Model position={sizes.targetPosition} />
+              <ReactLogo position={sizes.reactLogoPosition} />
+              <Rings position={sizes.ringPosition} />
+              <Cube position={sizes.cubePosition} />
                              </group>
                             <ambientLight intensity={1} />
                             <directionalLight

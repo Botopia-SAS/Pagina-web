@@ -72,91 +72,156 @@ export const navLinks = [
 
 export const myProjects = [
   {
-    title: "Automatización de Retrolavado para FEMSA Coca-Cola",
-    desc: "Implementación y programación de la etapa de retrolavado de tanques para el sistema de producción de FEMSA Coca-Cola.",
-    subdesc: "Nuestro equipo diseñó e implementó el sistema de control para optimizar el retrolavado, mejorando la eficiencia de limpieza y reduciendo el tiempo de inactividad de los tanques. Este proyecto permitió un ahorro significativo en recursos y cumplió con los estándares de calidad de la industria alimentaria.",
-    spotlight: "", // Ruta de la imagen
-    logo: "/assets/femsa-cocacola.png.png",
-    logoStyle: { borderRadius: '50%' },
+    title: 'Planta Femsa Cocacola',
+    desc: 'Automatización de Planta de Retrolavado en Coca-Cola FEMSA.',
+    subdesc:
+      'Este proyecto automatizó la planta de retrolavado en Coca-Cola FEMSA mediante PLCs, optimizando el proceso y mejorando la eficiencia. También se desarrolló una interfaz HMI personalizada para facilitar el monitoreo y control en tiempo real.',
+    href: 'Botopia.tech',
+    texture: '/textures/project/Coca.mp4',
+    logo: './assets/logoco.png',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: '/assets/spotlight1.png',
     tags: [
-      { name: "PLC", path: "/assets/plc-logo.png" },
-      { name: "Automatización", path: "/assets/automation-logo.png" },
+      {
+        id: 1,
+        name: 'Siemens',
+        path: '/assets/Siemens.png',
+      },
+      {
+        id: 2,
+        name: 'PLC',
+        path: 'assets/PLC.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/assets/Codigo.png',
+      },
+      {
+        id: 4,
+        name: 'Framer Motion',
+        path: '/assets/framer.png',
+      },
     ],
-    href: "https://femsa.com/proyectos-retrolavado",
-    images: [
-      "/assets/femsa-tanque1.jpg",
-      "/assets/femsa-tanque2.jpg",
-      "/assets/femsa-tanque3.jpg"
-    ]
   },
   {
-    title: "Diseño y Simulación de Máquina Dispensadora de Jugos",
-    desc: "Desarrollo completo de una máquina dispensadora de jugos, modelada y simulada en 3D para optimizar su diseño y funcionalidad.",
-    subdesc: "Este proyecto incluyó desde el diseño conceptual hasta la simulación 3D de todos los componentes de la máquina, permitiendo una visualización y pruebas detalladas antes de la fase de fabricación. Nuestro diseño innovador asegura precisión en la dispensación y facilidad de mantenimiento.",
-    spotlight: "/assets/dispensadora-jugos.jpg",
-    logo: "/assets/foto4.png",
-    logoStyle: { borderRadius: '50%' },
+    title: 'VohGo',
+    desc: 'Vohgo - Plataforma de Compra Rápida de Componentes Eléctricos.',
+    subdesc:
+      'Vohgo es una aplicación para Android y iOS que facilita la compra rápida y conveniente de componentes eléctricos. Con una interfaz intuitiva y entregas en tiempo récord, ofrece a los usuarios una solución confiable para acceder a piezas de calidad en cualquier momento.',
+    href: 'Botopia.tech',
+    texture: '/textures/project/Vohgo.mp4',
+    logo: '/assets/Voh.png',
+    logoStyle: {
+      backgroundColor: '#13202F',
+      border: '0.2px solid #17293E',
+      boxShadow: '0px 0px 60px 0px #2F6DB54D',
+    },
+    spotlight: '/assets/spotlight2.png',
     tags: [
-      { name: "Modelado 3D", path: "/assets/3d-modeling-logo.png" },
-      { name: "Simulación", path: "/assets/simulation-logo.png" },
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'Flutter',
+        path: 'assets/Flutter.png',
+      },
+      {
+        id: 3,
+        name: 'Ios',
+        path: '/assets/ios.png',
+      },
+      {
+        id: 4,
+        name: 'Android',
+        path: '/assets/Android.png',
+      },
     ],
-    href: "https://example.com/dispensadora-jugos",
-    images: [
-      "/assets/dispensadora-sim1.jpg",
-      "/assets/dispensadora-sim2.jpg",
-      "/assets/dispensadora-sim3.jpg"
-    ]
   },
   {
-    title: "Coinly",
-    desc: "Aplicación que te permite manejar de una manera más fácil y confiable tus finanzas.",
-    subdesc: "Este proyecto incluye aliados como Tri,  analisis de movimientos fraudulentos y una intuitividad para que cualquier persona lo maneje.",
-    spotlight: "/assets/dispensadora-jugos.jpg",
-    logo: "../assets/LogoCoinly.jpg",
-    logoStyle: { borderRadius: '50%' },
+    title: 'Maquina Dispensadora',
+    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+    subdesc:
+      'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
+    href: 'Botopia.tech',
+    texture: '/textures/project/Solid.mp4',
+    logo: '/assets/foto4.png',
+    logoStyle: {
+      backgroundColor: '#60f5a1',
+      background:
+        'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
+      border: '0.2px solid rgba(208, 213, 221, 1)',
+      boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+    },
+    spotlight: '/assets/spotlight3.png',
     tags: [
-      { name: "Modelado 3D", path: "/assets/3d-modeling-logo.png" },
-      { name: "Simulación", path: "/assets/simulation-logo.png" },
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'Flutter',
+        path: 'assets/Flutter.png',
+      },
+      {
+        id: 3,
+        name: 'SolidWorks',
+        path: '/assets/LogoSolid.png',
+      },
+      {
+        id: 4,
+        name: 'Programacion',
+        path: '/assets/Codigo.png',
+      },
     ],
-    href: " https://banking-iota-nine.vercel.app/sign-in",
-    images: [
-      "../assets/coinly.jpg",
-    ]
   },
   {
-    title: "Matchmaking para Colombia Tech Week 2024",
-    desc: "Desarrollo de la funcionalidad de matchmaking para el evento Colombia Tech Week 2024, un evento tecnológico de gran envergadura en el país.",
-    subdesc: "Implementamos una solución de matchmaking que permite a los participantes conectar con otros asistentes, facilitando el networking y la creación de oportunidades comerciales. La herramienta fue clave para maximizar el impacto del evento, brindando una experiencia personalizada a cada participante.",
-    spotlight: "/assets/colombia-tech-week.jpg",
-    logo: "/assets/foto2.png",
-    logoStyle: { borderRadius: '50%' },
+    title: 'Coinly',
+    desc: 'Gestión Financiera y Recomendaciones de Inversión en un Solo Lugar.',
+    subdesc:
+      'Coinly es una aplicación innovadora que permite a los usuarios centralizar todas sus cuentas bancarias en un solo lugar, ofreciendo una visión completa y detallada de sus movimientos financieros. Además, Coinly analiza las tendencias del mercado de valores y proporciona recomendaciones de inversión personalizadas, ayudando a los usuarios a tomar decisiones informadas y a maximizar sus oportunidades de crecimiento financiero.',
+    href: 'https://banking-iota-nine.vercel.app/sign-in',
+    texture: '/textures/project/Coinlym.mp4',
+    logo: '/assets/Coinly.png',
+    logoStyle: {
+      backgroundColor: '#0E1F38',
+      border: '0.2px solid #0E2D58',
+      boxShadow: '0px 0px 60px 0px #2F67B64D',
+    },
+    spotlight: '/assets/spotlight4.png',
     tags: [
-      { name: "Desarrollo Web", path: "/assets/web-development-logo.png" },
-      { name: "Matchmaking", path: "/assets/matchmaking-logo.png" },
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'Flutter',
+        path: 'assets/Flutter.png',
+      },
+      {
+        id: 3,
+        name: 'Ios',
+        path: '/assets/ios.png',
+      },
+      {
+        id: 4,
+        name: 'Android',
+        path: '/assets/Android.png',
+      },
     ],
-    href: "https://colomabiatechweek.com",
-    images: [
-      "/assets/techweek1.jpg",
-    ]
   },
-  {
-    title: "Desarrollo de Apps Personalizadas - VOHGO",
-    desc: "Creación de aplicaciones móviles personalizadas, como la app VOHGO, diseñada para satisfacer necesidades específicas de nuestros clientes.",
-    subdesc: "Desarrollamos VOHGO, una app personalizada que integra diversas funciones únicas para optimizar la experiencia de sus usuarios. Con un enfoque en la usabilidad y el diseño intuitivo, nuestro equipo se aseguró de cumplir con los más altos estándares de calidad en cada etapa del proyecto.",
-    spotlight: "/assets/vohgo-app.jpg",
-    logo: "/assets/vohgo-logo.png",
-    logoStyle: { borderRadius: '50%' },
-    tags: [
-      { name: "Desarrollo Móvil", path: "/assets/mobile-development-logo.png" },
-      { name: "Personalización", path: "/assets/customization-logo.png" },
-    ],
-    href: "https://vohgo.com",
-    images: [
-      "/assets/vohgo1.jpg",
-      "/assets/vohgo2.jpg",
-      "/assets/vohgo3.jpg"
-    ]
-  },
+
 ];
 
   
@@ -165,9 +230,9 @@ export const myProjects = [
       deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
       deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
       cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
-      reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-      ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
-      targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
+      reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [8, 3, 0],
+      ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-17, 5, 0],
+      targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-5, -10, -10] : isTablet ? [-5, -7, -10] : [-8, -13, -10],
     };
   };
   
